@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="mycss.css"/>
+    <script type="text/javascript" src="myscripts.js" ></script>
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <p>
+        Есть такой код: <br>
+        var a = 1, b = 1, c, d; <br><br>
+
+        c = ++a;<br>
+        alert(c); // 2<br>
+        d = b++;<br>
+        alert(d); // 1<br><br>
+
+        c = (2+ ++a);<br>
+        alert(c); // 5<br>
+        d = (2+ b++);<br>
+        alert(d); // 4<br><br>
+
+        alert(a); // 3<br>
+        alert(b); // 3<br>
+    </p>
+    <p>Необходимо разобраться почему работает именно так. Объяснения написать в виде комментария к каждой строчке</p>
+
+    <script type="text/javascript" language="JavaScript">
+        abcd();
+    </script>
+
+
+    <p>Задание 2. Чему будет равен x в примере ниже?<br>
+        var a = 2;<br>
+        var x = 1 + (a *= 2);</p>
+    <script type="text/javascript" language="JavaScript">
+        getX();
+    </script>
+
+    <p>Задание 3. Напишите программу, которая выводит через console.log все числа от 1 до 100, с двумя
+        исключениями. Для чисел, нацело делящихся на 3, она должна выводить ‘Fizz’, а для чисел, делящихся на 5 (но не
+        на 3)
+        – ‘Buzz’.Когда сумеете – исправьте её так, чтобы она выводила «FizzBuzz» для всех чисел, которые делятся и на 3
+        и на
+        5.</p>
+    <script type="text/javascript" language="JavaScript">
+        getFizzBizz();
+    </script>
+</div>
+
+</body>
+</html>
