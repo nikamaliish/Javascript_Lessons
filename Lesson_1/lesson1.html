@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="mycss.css"/>
+    <title></title>
+    <script type="text/javascript" defer>
+        alert('Hello, JavaScript!');
+    </script>
+</head>
+<body>
+<div class="container" id="container">
+    <p>1) Вывести «Привет, Javascript» c помощью alert</p>
+
+    <hr>
+
+    <p>2) Объявите две переменные: admin и name. Запишите в name строку "Василий".
+        Скопируйте значение из name в admin. Выведите admin (должно вывести «Василий»).</p>
+    <script>
+        var admin, name;
+        name = 'Василий';
+        admin = name;
+        console.log(admin);
+
+    </script>
+    <hr>
+
+    <p>3. Создайте объект device со свойствами model (строка), name (строка) и cost (число), присвойте этим свойствам
+        значения, которые соответствуют указанным в скобках типам. Выведите в консоль все три свойства.</p>
+
+    <script>
+        var device = {model: "Apple", name: "iPhone5", cost: 30000};
+        console.log("model: " + device.model + ",  name: " + device.name + ", cost: " + device.cost);
+    </script>
+    <hr>
+
+    <p>4. Создайте любую 1 переменную так, чтобы typeof этой переменной возвращал undefined</p>
+
+    <script>
+        var x;
+        console.log(typeof x);
+    </script>
+
+</div>
+
+</body>
+</html>
