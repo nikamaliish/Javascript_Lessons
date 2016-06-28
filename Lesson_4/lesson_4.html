@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="mycss.css">
+    <script type="text/javascript" language="JavaScript" src="myscripts.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <p>1) Напишите функцию min, принимающую два аргумента, и возвращающую минимальный из них.</p>
+
+    <p><input type="text" id="var1" placeholder="Первый аргумент" required></p>
+
+    <p><input type="text" id="var2" placeholder="Второй аргумент" required></p>
+    <input type="submit" onclick="getMin('var1', 'var2')">
+    <br>
+
+    <div class="result" id="result1"></div>
+
+    <p>2) Напишите функцию countBs, которая принимает строку в качестве аргумента, и возвращает количество символов “B”,
+        содержащихся в строке.Затем напишите функцию countChar, которая работает примерно как countBs, только принимает
+        второй параметр — символ, который мы будем искать в строке (вместо того, чтобы просто считать количество
+        символов “B”). Для этого переделайте функцию countBs.</p>
+
+    <p><input type="text" id="string" placeholder="Введите любой текст" required></p>
+
+    <p><input type="text" id="symbol" maxlength="1" placeholder="Введите символ"></p>
+
+    <input type="button" value="Найти символ 'b" onclick="countBs('string')">
+
+    <input type="button" value="Найти указанный символ" onclick="countChar('string', 'symbol')">
+
+    <div class="result" id="result2"></div>
+
+    <p>3) Ноль чётный. Единица нечётная. У любого числа N чётность такая же, как у N-2.Напишите рекурсивную функцию
+        isEven согласно этим правилам. Она должна принимать число и возвращать булевское значение. Потестируйте её на 50
+        и 75. Попробуйте задать ей -1. Почему она ведёт себя таким образом? Можно ли её как-то исправить?</p>
+
+    <p><input type="text" id="number" placeholder="Введите число" required></p>
+    <input type="button" value="Проверить" onclick="getBoolean()">
+
+    <div class="result" id="result3"></div>
+
+</div>
+</body>
+</html>
