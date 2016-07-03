@@ -51,8 +51,8 @@ function objectToQueryString(obj) {
         string;
     for (var i in obj) {
         properties.push(i + '=' + obj[i]);
-        string = properties.join('&')
     }
+        string = properties.join('&')
     console.log(string);
     return string;
 }
