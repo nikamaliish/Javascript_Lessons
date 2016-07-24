@@ -204,14 +204,15 @@ function getPrimeNumbersByEratosphen(n) {
         if(arr[i] < 1) continue;
         for (var j = i+1; j < length; j++) {
             if (arr[j] % arr[i] === 0) {
-                arr[j] = 0;
+                arr[j] = false;
             }
         }
     }
     for (i = 0; i < length; i++){
+        if(arr[i] > 0)
         sum += arr[i];
     }
-    console.log(sum, arr);
+//    console.log(sum, arr);
     return sum;
 }
 
@@ -258,6 +259,7 @@ function getMaxSubSumQuickly(arr) {
         maxSum = Math.max(maxSum, partialSum);
         if (partialSum < 0) partialSum = 0; // если в какой-то момент частичная сумма < 0, значит она уже не нужна, обнуляем ее и идем дельше
     }
+    console.log(maxSum);
     return maxSum;
 }
 
