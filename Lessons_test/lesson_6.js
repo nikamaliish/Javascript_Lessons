@@ -375,7 +375,7 @@ console.log(arr5); // HTML, JavaScript, CSS (без изменений)
 //Используйте функцию sort для того, чтобы «перетрясти» элементы массива в случайном порядке.
 
 var arr6 = [1, 2, 3, 4, 5];
-function randomSort(arr){
+function randomSort(arr) {
     arr.sort(function (a, b) {
         return Math.random() - 0.5;
     });
@@ -419,17 +419,60 @@ console.log(anagrammClean(arr7));
 var arr8 = ["воз", "киборг", "корсет", "ЗОВ", "гробик", "костер", "сектор"];
 console.log(arr8);
 
-function anagrammClean2(arr){
+function anagrammClean2(arr) {
     var obj = {};
-    for(var i = 0; i < arr.length; i++){
+    for (var i = 0; i < arr.length; i++) {
         var sorted = arr[i].split('').sort().join('').toLowerCase();
         obj[sorted] = arr[i];
     }
     var result = [];
-    for(var key in obj){
+    for (var key in obj) {
         result.push(obj[key]);
     }
     return result;
 }
 
 console.log(anagrammClean2(arr8));
+
+
+//Оставить уникальные элементы массива
+//Пусть arr – массив строк.
+//Напишите функцию unique(arr), которая возвращает массив, содержащий только уникальные элементы arr.
+//    Например:
+//
+//function unique(arr) {
+//    /* ваш код */
+//}
+//var strings = ["кришна", "кришна", "харе", "харе",
+//    "харе", "харе", "кришна", "кришна", "8-()"
+//];
+//alert( unique(strings) ); // кришна, харе, 8-()
+
+function unique(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = i+1; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+                arr.splice(j, 1);
+                j--;
+            }
+        }
+    }
+    return arr;
+}
+var strings = ["кришна", "кришна", "харе", "харе",
+    "харе", "харе", "кришна", "кришна", "8-()"];
+console.log(unique(strings)); // кришна, харе, 8-()
+
+
+function unique2(arr) {
+    var obj = {};
+        for (var i = 0; i < arr.length; i++) {
+        obj[arr[i]] = true;
+    }
+    var result = Object.keys(obj);
+    return result ;
+}
+
+var strings2 = ["кришна", "кришна", "харе", "харе",
+    "харе", "харе", "кришна", "кришна", "8-()"];
+console.log(unique2(strings2)); // кришна, харе, 8-()
