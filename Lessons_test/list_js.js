@@ -28,7 +28,7 @@ function arrayToList(arr) {
 }
 
 
-function listToArray(list) { // черезчур заморочено получилось, кажется. Можно ведь сделать проще?
+function listToArray(list) {
     var arr = [];
     listToArray1(list, arr);
 
@@ -83,9 +83,15 @@ console.log(nth(arrayToList([10, 20, 30]), 1));
 
 
 //Вывести односвязный список
+//var list = { value: 1 };
+//list.next = { value: 2 };
+//list.next.next = { value: 3 };
+//list.next.next.next = { value: 4 };
+
 //1. Напишите функцию printList(list), которая выводит элементы списка по очереди, при помощи цикла.
 //2. Напишите функцию printList(list) при помощи рекурсии.
-//3. Напишите функцию printReverseList(list), которая выводит элементы списка в обратном порядке, при помощи рекурсии. Для списка выше она должна выводить 4,3,2,1
+//3. Напишите функцию printReverseList(list), которая выводит элементы списка в обратном порядке, при помощи рекурсии.
+// Для списка выше она должна выводить 4,3,2,1
 //4. Сделайте вариант printReverseList(list), использующий не рекурсию, а цикл.
 
 var list = {
@@ -103,7 +109,49 @@ var list = {
 };
 
 function printList(list) {
-    for (var i = 0; i < list.length; i++) {
+    var tmp = list;
 
+    while (tmp) {
+        console.log(tmp.value);
+        tmp = tmp.next;
     }
 }
+
+printList(list);
+
+
+function printList2(list) {
+    console.log(list.value);
+    if (list.next) {
+        printList2(list.next);
+    }
+}
+
+printList2(list);
+
+
+function printReverseList(list) {
+    if (list.next) {
+        printReverseList(list.next);
+    }
+    console.log(list.value);
+}
+
+printReverseList(list);
+
+
+function printReverseList2(list) {
+   var tmp = list,
+       arr = [];
+
+    while(tmp){
+        arr.push(tmp.value);
+        tmp = tmp.next;
+    }
+
+    for(var i = arr.length-1; i >= 0 ; i--){
+        console.log(arr[i]);
+    }
+}
+
+printReverseList2(list);
