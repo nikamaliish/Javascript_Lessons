@@ -30,7 +30,7 @@ function getChessBoard() {
         oneString += "<br>";
     }
     console.log(oneString);
-    document.write('<pre>' + oneString + '</pre>'); // при выводе на экран первый пробел исчезает и шахматная доска не получается(
+    document.write('<pre>' + oneString + '</pre>');
 }
 
 
@@ -38,7 +38,7 @@ function getChessBoard2() {
     var chessElements = ['#', ' '],
         chessBoard = '',
         oneString;
-    for (var i = 0, j; i < 8; i++) {
+    for (var i = 0; i < 8; i++) {
         oneString = chessElements.join('').repeat(4);
         console.log(oneString);
         chessBoard += oneString + '<br>';
