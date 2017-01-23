@@ -25,7 +25,7 @@ function getNumberOfMoves_Cycle(numberOfDiscs) {
 // i (numberOfDiscs) = 2, numberOfMoves = 2*1 + 1 = 3;
 // i (numberOfDiscs) = 3, numberOfMoves = 2*3 + 1 = 7;
 // i (numberOfDiscs) = 4, numberOfMoves = 2*7 + 1 = 15;
-// i (numberOfDiscs) = 5, numberOfMoves = 2*1 + 1 = 31;
-// i (numberOfDiscs) = 6, numberOfMoves = 2*15 + 1 = 62;
-// i (numberOfDiscs) = 7, numberOfMoves = 2*15 + 1 = 127;
-// i (numberOfDiscs) = 8, numberOfMoves = 2*15 + 1 = 255;
+// i (numberOfDiscs) = 5, numberOfMoves = 2*15 + 1 = 31;
+// i (numberOfDiscs) = 6, numberOfMoves = 2*31 + 1 = 62;
+// i (numberOfDiscs) = 7, numberOfMoves = 2*62 + 1 = 127;
+// i (numberOfDiscs) = 8, numberOfMoves = 2*127 + 1 = 255;
